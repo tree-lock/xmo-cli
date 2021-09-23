@@ -18,8 +18,15 @@ import PageSider from "@/components/Page/Sider.vue";
 div.default-layout {
   display: flex;
   height: 100%;
+  > *:first-child {
+    flex-shrink: 0;
+  }
   > section {
+    position: relative;
     flex: auto;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 }
 </style>

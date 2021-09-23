@@ -22,6 +22,7 @@ const goLogin = () => {
 
 <style lang="scss">
 header.page-header {
+  background-color: #ffffff;
   height: 48px;
   line-height: 48px;
   width: 100%;
