@@ -14,8 +14,6 @@ const submitForm = () => {
     router.push({
       name: "Home",
     });
-    debugger;
-    console.log(router);
   } else {
     alert("请输入账号密码");
   }

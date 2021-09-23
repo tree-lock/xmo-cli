@@ -1,6 +1,10 @@
-<script setup></script>
+<script setup>
+import Layout from "@/layouts/default.vue";
+</script>
 <template>
-  <h1>This is Home Page</h1>
+  <Layout>
+    <h1>This is Home Page</h1>
+  </Layout>
 </template>
 
 <style lang="scss"></style>
