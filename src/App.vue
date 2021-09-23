@@ -4,6 +4,8 @@
 </template>
 
 <style lang="scss">
+@import "@/assets/style/main.scss";
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

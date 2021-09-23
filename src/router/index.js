@@ -1,11 +1,20 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 const routes = [
-  { path: "/", component: () => import("@/pages/Home.vue") },
-  { path: "/about", component: () => import("@/pages/About.vue") },
-  { path: "/login", component: () => import("@/pages/Login.vue") },
+  { path: "/", name: "Home", component: () => import("@/pages/Home.vue") },
+  {
+    path: "/about",
+    name: "About",
+    component: () => import("@/pages/About.vue"),
+  },
+  {
+    path: "/login",
+    name: "Login",
+    component: () => import("@/pages/Login.vue"),
+  },
   {
     path: "/404",
+    name: "404",
     component: () => import("@/pages/NotFound.vue"),
   },
   {
