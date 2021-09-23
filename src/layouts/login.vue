@@ -1,6 +1,6 @@
 <script setup></script>
 <template>
-  <h1>This is Home Page</h1>
+  <div class="login-layout"></div>
 </template>
 
 <style lang="scss"></style>
