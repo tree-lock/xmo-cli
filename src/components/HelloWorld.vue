@@ -1,15 +1,20 @@
 <script setup>
-import { ref } from 'vue'
+import { ref } from "vue";
 
 defineProps({
-  msg: String
-})
+  msg: String,
+});
 
-const count = ref(0)
+const count = ref(0);
 </script>
 
 <template>
   <h1>{{ msg }}</h1>
+
+  <h2>
+    This project is initialized by
+    <a href="https://gitee.com/dXmo/xmo-cli" target="_blank">Xmo-cli</a>
+  </h2>
 
   <p>
     Recommended IDE setup:
@@ -33,7 +38,7 @@ const count = ref(0)
   </p>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 a {
   color: #42b983;
 }
