@@ -32,10 +32,6 @@ onBeforeMount(async () => {
 
 <style lang="scss" scoped>
 ul {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  padding: 24px;
-  gap: 16px;
   > li {
     background-color: #ffffff;
     border-radius: 4px;

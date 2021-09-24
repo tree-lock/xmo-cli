@@ -30,12 +30,15 @@ onMounted(() => {
 });
 const navList = [
   { name: "Home", alias: "H", to: "Home" },
+  { name: "Test", alias: "T", to: "Test" },
   { name: "About", alias: "A", to: "About" },
 ];
 
 const goNav = (item) => {
   if (route.name !== item.to) {
-    router.push(item.to);
+    router.push({
+      name: item.to,
+    });
   }
 };
 </script>
