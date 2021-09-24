@@ -17,11 +17,6 @@
     "vue": "^3.2.13",
     "vue-router": "4"
   },
-  "config": {
-    "commitizen": {
-      "path": "node_modules/cz-conventional-changelog"
-    }
-  },
   "lint-staged": {
     "src/**/*.vue": [
       "eslint --fix",
@@ -30,7 +25,9 @@
     "src/**/*.js": [
       "eslint --fix",
       "prettier --write --ignore-unknown"
-    ]
+    ],
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
   },
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
@@ -41,7 +38,7 @@
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-vue": "^7.18.0",
-    "husky": "^7.0.2",
+    "husky": "^7.0.0",
     "lint-staged": "^11.1.2",
     "prettier": "2.4.1",
     "vite": "^2.5.10"

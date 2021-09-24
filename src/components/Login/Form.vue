@@ -32,7 +32,7 @@ const submitForm = (e) => {
         <input
           id="username"
           type="text"
-          v-model="form.username"
+          srting:v-model="form.username"
           autocomplete="username"
         />
       </label>
@@ -41,7 +41,7 @@ const submitForm = (e) => {
         <input
           id="password"
           type="password"
-          v-model="form.password"
+          string:v-model="form.password"
           autocomplete="current-password"
         />
       </label>
