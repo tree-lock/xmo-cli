@@ -31,8 +31,8 @@ const submitForm = (e) => {
         >账号
         <input
           id="username"
+          v-model="form.username"
           type="text"
-          srting:v-model="form.username"
           autocomplete="username"
         />
       </label>
@@ -40,8 +40,8 @@ const submitForm = (e) => {
         >密码
         <input
           id="password"
+          v-model="form.password"
           type="password"
-          string:v-model="form.password"
           autocomplete="current-password"
         />
       </label>
