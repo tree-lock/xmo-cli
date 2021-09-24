@@ -1,11 +1,30 @@
 <script setup>
-import { ref } from "vue-demi";
+import { throttle } from "@/services/utils";
+import { onBeforeMount, onMounted, ref, watchEffect } from "vue-demi";
 const ifNarrow = ref(false);
 const siderWidth = ref("208px");
 const changeWidth = () => {
   ifNarrow.value = !ifNarrow.value;
   siderWidth.value = ifNarrow.value ? "48px" : "208px";
 };
+
+onMounted(() => {
+  window.addEventListener(
+    "resize",
+    throttle(() => {
+      const clientWidth = document.body.clientWidth;
+      if (clientWidth < 750) {
+        ifNarrow.value = true;
+        siderWidth.value = "48px";
+      }
+      if (clientWidth > 750) {
+        ifNarrow.value = false;
+        siderWidth.value = "208px";
+      }
+    }, 300),
+    false
+  );
+});
 const navList = [{ name: "Home", alias: "H" }];
 </script>
 <template>
