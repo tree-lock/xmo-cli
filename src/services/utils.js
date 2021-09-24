@@ -1,3 +1,9 @@
+/**
+ * 节流
+ * @param {Function} fn
+ * @param {number} delay
+ * @returns 节流包装过得函数
+ */
 export function throttle(fn, delay) {
   let valid = true;
   return function () {

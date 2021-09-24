@@ -1,10 +1,14 @@
 <script setup>
 import { ref } from "vue";
+import { useRouter } from "vue-router";
 
 defineProps({
   msg: String,
 });
-
+const router = useRouter();
+const goLogin = () => {
+  router.push("Login");
+};
 const count = ref(0);
 </script>
 
@@ -15,7 +19,7 @@ const count = ref(0);
     This project is initialized by
     <a href="https://gitee.com/dXmo/xmo-cli" target="_blank">Xmo-cli</a>
   </h2>
-
+  <button type="button" @click="goLogin">To Login</button>
   <p>
     Recommended IDE setup:
     <a href="https://code.visualstudio.com/" target="_blank">VSCode</a>
@@ -32,6 +36,8 @@ const count = ref(0);
   </p>
 
   <button type="button" @click="count++">count is: {{ count }}</button>
+  <br />
+
   <p>
     Edit
     <code>components/HelloWorld.vue</code> to test hot module replacement.
@@ -41,5 +47,9 @@ const count = ref(0);
 <style scoped lang="scss">
 a {
   color: #42b983;
+}
+button {
+  background-color: lightblue;
+  border-radius: 5px;
 }
 </style>

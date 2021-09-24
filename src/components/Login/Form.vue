@@ -9,7 +9,8 @@ const form = reactive({
 
 const router = useRouter();
 
-const submitForm = () => {
+const submitForm = (e) => {
+  e.preventDefault();
   if (form.username && form.password) {
     router.push({
       name: "Home",

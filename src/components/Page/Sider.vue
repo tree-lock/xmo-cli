@@ -1,13 +1,16 @@
 <script setup>
 import { throttle } from "@/services/utils";
-import { onBeforeMount, onMounted, ref, watchEffect } from "vue-demi";
+import { onMounted, ref } from "vue-demi";
+import { useRoute, useRouter } from "vue-router";
 const ifNarrow = ref(false);
 const siderWidth = ref("208px");
 const changeWidth = () => {
   ifNarrow.value = !ifNarrow.value;
   siderWidth.value = ifNarrow.value ? "48px" : "208px";
 };
-
+const router = useRouter();
+const route = useRoute();
+const ifActiveNav = (item) => (item.to === route.name ? "active-nav" : "");
 onMounted(() => {
   window.addEventListener(
     "resize",
@@ -25,13 +28,28 @@ onMounted(() => {
     false
   );
 });
-const navList = [{ name: "Home", alias: "H" }];
+const navList = [
+  { name: "Home", alias: "H", to: "Home" },
+  { name: "About", alias: "A", to: "About" },
+];
+
+const goNav = (item) => {
+  if (route.name !== item.to) {
+    router.push(item.to);
+  }
+};
 </script>
 <template>
   <aside class="page-sider">
     <h2>{{ ifNarrow ? "导" : "导航栏" }}</h2>
     <ul>
-      <li v-for="item in navList">{{ ifNarrow ? item.alias : item.name }}</li>
+      <li
+        v-for="item in navList"
+        @click="goNav(item)"
+        :class="ifActiveNav(item)"
+      >
+        {{ ifNarrow ? item.alias : item.name }}
+      </li>
     </ul>
     <button @click="changeWidth">{{ ifNarrow ? "→" : "←" }}</button>
   </aside>
@@ -58,9 +76,19 @@ aside.page-sider {
     display: flex;
     flex-direction: column;
     li {
-      background-color: #1890ff;
+      background-color: #001529;
+      cursor: pointer;
       padding: 12px;
+      color: #a6aaae;
       text-align: center;
+      transition: all 0.25s ease-in;
+      &:hover {
+        color: #ffffff;
+      }
+      &.active-nav {
+        background-color: #1890ff;
+        color: #ffffff;
+      }
     }
   }
   > button {
