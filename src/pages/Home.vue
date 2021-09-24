@@ -12,7 +12,7 @@ onBeforeMount(async () => {
 <template>
   <Layout>
     <ul>
-      <li v-for="item in list">
+      <li v-for="item in list" :key="item.mal_id">
         <img :src="item.image_url" />
         <div class="info">
           <a :href="item.url">

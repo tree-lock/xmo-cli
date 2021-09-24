@@ -1,8 +1,15 @@
 <script setup>
+import { useUserStore } from "@/store";
 import { useRouter } from "vue-router";
+import { storeToRefs } from "pinia";
+import { computed } from "vue-demi";
 const router = useRouter();
+const store = useUserStore();
+const { ifLogin } = storeToRefs(store);
+const loginStr = computed(() => (ifLogin.value ? "已登录" : "未登录"));
 const goLogin = () => {
   router.push("Login");
+  store.logout();
 };
 </script>
 <template>
@@ -16,6 +23,7 @@ const goLogin = () => {
         width="36"
         @click="goLogin"
       />
+      <div>{{ loginStr }}</div>
     </div>
   </header>
 </template>
@@ -36,6 +44,7 @@ header.page-header {
     align-items: center;
     > img {
       border-radius: 50%;
+      margin-right: 6px;
       cursor: pointer;
     }
   }

@@ -1,6 +1,7 @@
 <script setup>
 import { reactive } from "vue-demi";
 import { useRouter } from "vue-router";
+import { useUserStore } from "@/store";
 
 const form = reactive({
   username: "",
@@ -8,6 +9,7 @@ const form = reactive({
 });
 
 const router = useRouter();
+const store = useUserStore();
 
 const submitForm = (e) => {
   e.preventDefault();
@@ -15,6 +17,7 @@ const submitForm = (e) => {
     router.push({
       name: "Home",
     });
+    store.login();
   } else {
     alert("请输入账号密码");
   }
