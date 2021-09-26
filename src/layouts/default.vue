@@ -27,6 +27,15 @@ div.default-layout {
     height: 100%;
     overflow-y: auto;
     overflow-x: hidden;
+
+    > div.content {
+      > *:first-child {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        padding: 24px;
+        gap: 16px;
+      }
+    }
   }
 }
 </style>

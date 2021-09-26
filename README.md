@@ -19,3 +19,25 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 `Home` ：自适应页面，演示了如何调用 `services` 接口，如何使用 `@media` 进行项目页面自适应，如何对导航栏进行自适应，如何调用后端接口。
 
 `404`：404页面
+
+## 项目依赖
+
+`axios`、 `pinia`、 `sass`、 `vue`、 `vue-router` 
+
+## 功能点示例
+
+| 功能                | 文件                             |
+| ------------------- | -------------------------------- |
+| 页面布局            | @/layouts                        |
+| 项目分层            | @/api 、 @/services              |
+| Vue-Router 的使用   | @/router、@/pages                |
+| Pinia 的使用        | @/store                          |
+| 异步 Axios 的封装   | @/api                            |
+| proxy 开发代理设置  | vite.config.ts                   |
+| prettier 配置       | .prettierrc.json                 |
+| public 静态目录引用 | @/components/Page/Header(avatar) |
+| 404 页面            | @/pages/NotFound、@/router       |
+| 两栏布局            | @/layouts/Login                  |
+| 侧边布局            | @/layouts/Default                |
+| 自适应布局          | @/layouts/Default                |
+
