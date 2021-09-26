@@ -1,0 +1,41 @@
+body,
+html {
+  padding: 0;
+  margin: 0;
+  min-width: 310px;
+  min-height: 560px;
+  height: 100%;
+}
+
+div#app {
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  > li {
+    list-style-type: none;
+  }
+}
