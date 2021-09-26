@@ -6,7 +6,11 @@
 
 - [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
 
-Volar（Vue Language Features (Volar)） 能为你提供最新最完善的开发提示。
+  Volar（Vue Language Features (Volar)） 能为你提供最新最完善的开发提示。
+
+  VSCode 插件
+
+  - Prettier
 
 ## 推荐编码规则
 
@@ -41,9 +45,9 @@ Volar（Vue Language Features (Volar)） 能为你提供最新最完善的开发
 | 异步 Axios 的封装 | @/api |
 | proxy 开发代理设置 | vite.config.ts |
 | prettier 配置 | .prettierrc.json |
-| 接口 interface 使用示例 | @/api |
 | public 静态目录引用 | @/components/Page/Header(avatar) |
 |  404 页面 | @/pages/NotFound、@/router |
 | 两栏布局 | @/layouts/Login |
 | 侧边布局 | @/layouts/Default |
 | 自适应布局 | @/layouts/Default |
+| 接口 interface 使用示例 | @/api |
