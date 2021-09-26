@@ -8,6 +8,15 @@
 
 Volar（Vue Language Features (Volar)） 能为你提供最新最完善的开发提示。
 
+## 启动命令
+
+```bash
+yarn
+yarn prepare
+
+yarn dev
+```
+
 ## 推荐编码规则
 
 所有的组件都采用驼峰命名（如 TemplateComponent），组件统一首字母大写，`js` / `ts` 文件统一首字母小写。所有接口（`Interface`）统一首字母大写。所有 `style` 文件都采用 `sass` 语言。
@@ -20,7 +29,7 @@ Volar（Vue Language Features (Volar)） 能为你提供最新最完善的开发
 
 `Home` ：自适应页面，演示了如何调用 `services` 接口，如何使用 `@media` 进行项目页面自适应，如何对导航栏进行自适应，如何调用后端接口。
 
-`404`：404 页面
+`404`：404 页面。
 
 ## 项目依赖
 
