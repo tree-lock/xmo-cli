@@ -6,7 +6,11 @@
 
 - [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
 
-Volar（Vue Language Features (Volar)） 能为你提供最新最完善的开发提示。
+  Volar（Vue Language Features (Volar)） 能为你提供最新最完善的开发提示。
+
+  VSCode 插件
+
+  - Prettier
 
 ## 推荐编码规则
 
