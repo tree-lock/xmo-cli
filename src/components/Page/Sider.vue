@@ -58,9 +58,11 @@ const ifActiveNav = (item: NavItem) =>
 /**
  * 导航栏跳转
  */
-const goNav = (item: NavItem) => {
+const goNav = (item) => {
   if (route.name !== item.to) {
-    router.push(item.to);
+    router.push({
+      name: item.to,
+    });
   }
 };
 </script>
