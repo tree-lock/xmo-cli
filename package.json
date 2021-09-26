@@ -1,6 +1,6 @@
 {
   "name": "xmo-cli-ts-mini",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "license": "MIT",
   "description": "",
   "scripts": {
@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "axios": "^0.21.4",
+    "mitt": "^3.0.0",
     "pinia": "^2.0.0-rc.9",
     "sass": "^1.42.1",
     "vue": "^3.2.13",

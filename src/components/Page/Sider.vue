@@ -48,6 +48,7 @@ onMounted(() => {
  */
 const navList: NavItem[] = [
   { name: "Home", alias: "H", to: "Home" },
+  { name: "Test", alias: "T", to: "Test" },
   { name: "About", alias: "A", to: "About" },
 ];
 /**
@@ -58,7 +59,7 @@ const ifActiveNav = (item: NavItem) =>
 /**
  * 导航栏跳转
  */
-const goNav = (item) => {
+const goNav = (item: NavItem) => {
   if (route.name !== item.to) {
     router.push({
       name: item.to,

@@ -5,6 +5,7 @@
 
 <style lang="scss">
 @import "@/assets/style/main.scss";
+@import "@/assets/style/customization.scss";
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

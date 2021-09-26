@@ -13,6 +13,11 @@ const routes = [
     component: () => import("@/pages/Login.vue"),
   },
   {
+    path: "/test",
+    name: "Test",
+    component: () => import("@/pages/Test.vue"),
+  },
+  {
     path: "/404",
     name: "404",
     component: () => import("@/pages/NotFound.vue"),
