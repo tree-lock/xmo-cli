@@ -6,7 +6,13 @@
 
 - [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
 
-Volar（Vue Language Features (Volar)） 能为你提供最新最完善的开发提示。
+  Volar（Vue Language Features (Volar)） 能为你提供最新最完善的开发提示。
+
+  VSCode 插件
+
+  - Prettier
+
+  - Eslint
 
 ## 启动命令
 
@@ -28,6 +34,8 @@ yarn dev
 `Login`：登录页面，演示了如何进行 `Vue3` 最基础的登录。
 
 `Home` ：自适应页面，演示了如何调用 `services` 接口，如何使用 `@media` 进行项目页面自适应，如何对导航栏进行自适应，如何调用后端接口。
+
+`Test`：测试页面，用于测试某些模块，目前仅测试 `Mitt` 。
 
 `404`：404 页面。
 
@@ -64,6 +72,6 @@ yarn dev
 
 ### 质量管理
 
-`husky` + `commitlint` + `lint-staged` + `prettier` + `eslint` 是现在主流的前端质量管理方案，如果对它们的使用存在疑问，可以查看官网了解详情。
+`husky` + `commitlint` + `lint-staged` + `prettier` + `eslint` 是现在主流的前端质量管理方案，如果对它们的使用存在疑问，可以查看对应的插件官网了解详情。
 
 由于已经对 `git` 进行了 `husky` 劫持，**建议采用 `yarn commit` 的方式代替 `git commit -am ""`** ，以帮助你书写符合规范的 `commit` 文书。
