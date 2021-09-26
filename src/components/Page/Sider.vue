@@ -2,16 +2,26 @@
 import { throttle } from "@/services/utils";
 import { onMounted, ref } from "vue-demi";
 import { useRoute, useRouter } from "vue-router";
+
 const ifNarrow = ref(false);
+/**
+ * 利用 Vue3.2 的特性来让 scss 利用 v-bind 获取 js 变量
+ */
 const siderWidth = ref("208px");
+/**
+ * 修改侧边导航栏的宽窄
+ */
 const changeWidth = () => {
   ifNarrow.value = !ifNarrow.value;
   siderWidth.value = ifNarrow.value ? "48px" : "208px";
 };
 const router = useRouter();
 const route = useRoute();
-const ifActiveNav = (item) => (item.to === route.name ? "active-nav" : "");
+
 onMounted(() => {
+  /**
+   * 用js实现自适应
+   */
   window.addEventListener(
     "resize",
     throttle(() => {
@@ -28,12 +38,21 @@ onMounted(() => {
     false
   );
 });
+/**
+ * 导航栏列表，又导航项全称、简称和跳转构成。
+ */
 const navList = [
   { name: "Home", alias: "H", to: "Home" },
   { name: "Test", alias: "T", to: "Test" },
   { name: "About", alias: "A", to: "About" },
 ];
-
+/**
+ * 判断是否为当前导航栏
+ */
+const ifActiveNav = (item) => (item.to === route.name ? "active-nav" : "");
+/**
+ * 导航栏跳转
+ */
 const goNav = (item) => {
   if (route.name !== item.to) {
     router.push({
@@ -48,8 +67,9 @@ const goNav = (item) => {
     <ul>
       <li
         v-for="item in navList"
-        @click="goNav(item)"
+        :key="item.name"
         :class="ifActiveNav(item)"
+        @click="goNav(item)"
       >
         {{ ifNarrow ? item.alias : item.name }}
       </li>
