@@ -1,0 +1,4 @@
+2021/09/27 01:59:32 [notice] 78#78: signal process started
+2021/09/27 02:00:18 [notice] 92#92: signal process started
+2021/09/27 02:00:22 [error] 93#93: *1 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 127.0.0.1, server: _, request: "GET / HTTP/1.1", host: "localhost"
+2021/09/27 02:00:51 [notice] 103#103: signal process started
