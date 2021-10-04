@@ -2,6 +2,7 @@ version: "3"
 
 services:
   web:
+    context: "../"
     container_name: docker-nginx
     restart: always
     build: 
