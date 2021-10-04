@@ -2,7 +2,7 @@
 
 该文件夹管理 Docker 一键打包部署的代码。
 
-`docker-compose.yml` ：`node` 打包并且使用 `nginx` 进行代理，并默认暴露端口 `80` 并使用主机 `80` 端口。
+`docker-compose.yml` ：`node` 打包并且使用 `nginx` 进行代理，并默认暴露端口 `80` 并使用主机 `4000` 端口。
 
 ## 启动命令
 
@@ -21,22 +21,6 @@ docker-compose -f ./docker/docker-compose.yml up -d
 !!! 请记得修改conf/nginx.conf
 !!! 请记得修改conf/nginx.conf
 !!! 请记得修改conf/nginx.conf
-
-如果你不需要 `nginx` 做代理，请直接在 `docker-compose.yml` 中注释掉 `nginx` 字段的所有内容。如下所示
-
-```yml
-  # nginx:
-  #   image: nginx:stable
-  #   container_name: nginx
-  #   restart: always
-  #   ports:
-  #     - 80:80
-  #   volumes:
-  #     - ../dist:/usr/share/nginx/html
-  #     - ./logs:/var/log/nginx
-  #     - ./conf.d:/etc/nginx/conf.d
-  #     - ./conf/nginx.conf:/etc/nginx/nginx.conf
-```
 
 ## 安装 Docker
 

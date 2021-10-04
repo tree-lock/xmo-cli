@@ -2,19 +2,12 @@ version: "3"
 
 services:
   web:
-    container_name: node-demo
-    build:
-      context: ../
-    volumes:
-      - ../:/app
-    command: yarn build"
-    user: "1000:1000"
-  nginx:
-    image: nginx:stable
-    container_name: nginx
+    container_name: docker-nginx
     restart: always
+    build: 
+      context: ./
     ports:
-      - 80:80
+      - "4000:80"
     volumes:
       - ../dist:/usr/share/nginx/html
       - ./logs:/var/log/nginx
