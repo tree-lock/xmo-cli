@@ -7,4 +7,4 @@ services:
       context: ../
     volumes:
       - ../:/app
-    command: bash -c "yarn && yarn build"
+    command: bash -c " (yarn config set registry https://registry.npm.taobao.org) && (yarn config set sass-binary-site https://npm.taobao.org/mirrors/node-sass) && yarn && yarn build"
