@@ -2,11 +2,10 @@ version: "3"
 
 services:
   web:
-    context: "../"
     container_name: docker-nginx
     restart: always
     build: 
-      context: ./
+      context: ../
     ports:
       - "4000:80"
     volumes:
