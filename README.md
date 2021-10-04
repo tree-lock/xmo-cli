@@ -1,12 +1,8 @@
 # .docker
 
-该文件夹管理 Docker 一键开发和一键打包部署的代码。
+该文件夹管理 Docker 一键打包部署的代码。
 
 `docker-compose.yml` ：`node` 打包并且使用 `nginx` 进行代理，并默认暴露端口 `80` 并使用主机 `80` 端口。
-
-`docker-compose.build.yml`： 只进行项目打包而不进行代理。
-
-`docker-compose.dev.yml`：项目开发容器，通过启动 `node` 容器允许你在任何环境直接进行开发。暴露并使用主机端口 `3000` 。
 
 ## 启动命令
 
@@ -21,6 +17,26 @@ docker-compose -f ./docker/docker-compose.yml up -d
 ```
 
 `nginx` 日志保存在 `logs` 文件夹中，`nginx` 启动配置保存在 `conf` 和 `conf.d` 中，如果你修改了 `api` 的代理服务器，请勿忘记在 `conf.d` 中也做相应的修改。
+
+!!! 请记得修改conf/nginx.conf
+!!! 请记得修改conf/nginx.conf
+!!! 请记得修改conf/nginx.conf
+
+如果你不需要 `nginx` 做代理，请直接在 `docker-compose.yml` 中注释掉 `nginx` 字段的所有内容。如下所示
+
+```yml
+  # nginx:
+  #   image: nginx:stable
+  #   container_name: nginx
+  #   restart: always
+  #   ports:
+  #     - 80:80
+  #   volumes:
+  #     - ../dist:/usr/share/nginx/html
+  #     - ./logs:/var/log/nginx
+  #     - ./conf.d:/etc/nginx/conf.d
+  #     - ./conf/nginx.conf:/etc/nginx/nginx.conf
+```
 
 ## 安装 Docker
 
