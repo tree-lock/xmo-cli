@@ -2,11 +2,21 @@
 
 旨在做最好的Vue3入门工具，且只关注 `Vue3 + Vite` 。
 
+什么时候你能用得上 xmo-cli？
+
+- 最近在学习 Vue3 且需要一（系列）开源项目帮助你真正入门。
+- 想为 Vue3 项目添加**质量管理配置**，你可能听说过类似的概念，但缺少经验，因此无从下手。
+- 想为 Vue3 项目添加** Docker 容器配置**，你可能听说过类似的概念，但缺少经验，因此无从下手。
+- 期待使用一个中文的 Vue3-cli 工具。
+- 乐于为开源项目提供建议和 Debug ，并成为 Contributors （贡献者）的一员。
+
+`xmo-cli` 可以为你的 `Vue3` 项目提供帮助。
+
 ## 介绍
 
 Cli创建项目，支持创建最新版 Vue3 的模板项目。本项目旨在提供最易上手的搭配项目质量管理的 `Vue3` 入门最佳实践。
 
-项目模板具备足量**必用插件**的简单示例，共有分6个分支，**循序渐进，且都很简单易懂**，还可以作为拉取[热门](https://github.com/vitejs/awesome-vite#templates)的 `Vue3` 开源模板的工具。
+项目模板具备足量**必用插件**的简单示例，共有分4个分支（两个JavaScript、两个typescript），**循序渐进，且都很简单易懂**，还可以作为拉取[热门](https://github.com/vitejs/awesome-vite#templates)的 `Vue3` 开源模板的工具。
 
 > 本项目用到的插件如果你在开发中从来没有用过，那么说明你该用用了。
 
@@ -30,7 +40,7 @@ npm install -g yarn
 
 1. `xmo-cli init [dir]` 
    
-   ![image](https://user-images.githubusercontent.com/37503114/135218919-97b305b8-f801-4eca-bf48-878b45c0578e.png)
+   ![image](https://user-images.githubusercontent.com/37503114/136072534-2415b72c-318f-4d11-a643-237adf8133a6.png)
    
 2. 按照指引输入对应内容进行操作
 
@@ -40,8 +50,7 @@ npm install -g yarn
 
 1. `xmo-cli create <dir>`
 
-![image](https://user-images.githubusercontent.com/37503114/135219056-1f48af10-4788-467e-a47b-954f5d99f426.png)
-![image](https://user-images.githubusercontent.com/37503114/135219230-f91d15a9-158f-4b75-b6a8-912444578151.png)
+![image](https://user-images.githubusercontent.com/37503114/136072612-454b5b73-97ed-4760-be66-516a9715b404.png)
 
 ### ⚙️ 添加项目配置
 
@@ -59,15 +68,24 @@ npm install -g yarn
   
   > Typescript 项目不提供 `Eslint` 质量管理配置方案。
   
-  ![image](https://user-images.githubusercontent.com/37503114/135219417-e1a3d327-5117-4985-a8bd-9cbd047eada2.png)
+  ![image](https://user-images.githubusercontent.com/37503114/136072833-07f48b5f-df6f-4dd9-b2eb-cb6a92c06b5f.png)
+  ![image](https://user-images.githubusercontent.com/37503114/136073213-e91d0a58-3aa4-41d6-ba75-4da685a5efe4.png)
+  
+  > 使用 commitizen 进行 git 提交，可以使提交message规范化。
+  > ![image](https://user-images.githubusercontent.com/37503114/136073408-10f047ea-2e26-4acf-bb24-bfac33e39bd1.png)
 
 
-2. 一键添加Docker配置（包括开发配置，打包配置和Nginx部署配置）。*开发中*
+2. 一键添加Docker配置（使用Nginx部署配置，暴露80端口，默认使用主机4000端口，详情查看生成的 .docker 文件夹）。
 
   ```bash
   # 在项目根目录
   xmo-cli init -d
+  
+  yarn docker:deploy
   ```
+  
+  ![image](https://user-images.githubusercontent.com/37503114/136073479-e9429a20-b25c-4257-9300-0dbef0f5b073.png)
+
 
 ## Help
 
@@ -143,6 +161,8 @@ npm install -g yarn
 #### 感谢
 
 感谢你的安装和使用。
+
+如果你觉得好用或值得支持，请将它推荐给你身边的人，谢谢。
 
 #### 参与贡献
 
