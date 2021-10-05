@@ -36,7 +36,7 @@ program
   });
 
 program
-  .version('v0.5.0')
+  .version('v0.5.1')
   .option('-v, --version', '版本号')
   .description('xmo-cli版本号');
 

@@ -1,6 +1,6 @@
 {
   "name": "xmo-cli",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Project init",
   "main": "index.js",
   "scripts": {
